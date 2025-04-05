@@ -74,5 +74,5 @@ function getMDXData(dir: string) {
 export function getPosts(customPath = ["", "", "", ""]) {
   const postsDir = path.join(process.cwd(), ...customPath);
   const posts = getMDXData(postsDir);
-  return posts.sort((a, b) => new Date(b.metadata.publishedAt) - new Date(a.metadata.publishedAt)); // Sort by latest
+  return posts.sort((a, b) => new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime()); // Sort by latest
 }
