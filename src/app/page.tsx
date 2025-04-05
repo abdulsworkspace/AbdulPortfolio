@@ -7,7 +7,6 @@ import { baseURL, routes } from "@/app/resources";
 import { home, about, person, newsletter } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
-import { getPosts } from "@/app/utils/utils";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -39,9 +38,6 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
-  const latestProjects = getPosts(["src", "app", "work", "projects"]).slice(0, 3); // Fetch latest 3 projects
-  const latestBlogPosts = getPosts(["src", "app", "blog", "posts"]).slice(0, 2); // Fetch latest 2 blog posts
-
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
       <script
@@ -102,7 +98,7 @@ export default function Home() {
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
-        <Projects projects={latestProjects} /> {/* Pass latest projects */}
+        <Projects range={[1, 3]} /> {/* Display first 3 projects */}
       </RevealFx>
       {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
@@ -112,7 +108,7 @@ export default function Home() {
             </Heading>
           </Flex>
           <Flex flex={3} paddingX="20">
-            <Posts posts={latestBlogPosts} columns="2" /> {/* Pass latest blog posts */}
+            <Posts range={[1, 2]} columns="2" /> {/* Display first 2 blog posts */}
           </Flex>
         </Flex>
       )}
