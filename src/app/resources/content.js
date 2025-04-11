@@ -12,7 +12,7 @@ const person = {
   role: <span style={{ fontSize: "0.7em" }}>Software Engineer | Cyber Security Researcher</span>,
   avatar: "/images/avatar.png", 
   displayLocation: "Pakistan/Lahore", // Changed from .jpg to .png
-  location: "Asia/Karachi",
+  location: "Pakistan/Lahore", // Updated to show only Pakistan/Lahore
   languages: ["English", "Urdu", "Punjabi"],
 };
 
