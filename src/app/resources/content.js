@@ -216,11 +216,10 @@ const about = {
   //TECHNICAL SKILLS SECTION
   technical: {
     display: true,
-    title: "Skills & Certifications",
-    skills: [
+    certifications: [
       {
         title: "Ethical Hacker Liscense by CISCO",
-        href: "#",  // Add this for the case study link
+        href: "#",
         content: "View details",
         link: "https://www.credly.com/badges/d9af35bf-fbd6-4c20-939c-e777359cf7ae/linked_in_profile",
         images: [
@@ -229,7 +228,7 @@ const about = {
             alt: "Ethical Hacker by CISCO",
             width: 11,
             height: 11,
-          },  // Add comma here
+          },
           {
             src: "/images/certificates/ethicalhacker.png",
             alt: "Ethical Hacker by CISCO",
@@ -245,13 +244,9 @@ const about = {
           <span key="cisco-desc-5">Developed skills in identifying and mitigating cyber security threats</span>
         ],
       },
-      //certifcate#2
       {
         title: "Ethical Hacking Esssentials by EC-Council",
-        description: <>Completed comprehensive training in ethical hacking fundamentals through EC-Council's 
-          EHE program, covering essential cybersecurity concepts, attack vectors, and defense strategies. 
-          Earned certification from EC-Council demonstrating proficiency in ethical hacking principles.</>,
-        href: "#",  // Add this for the case study link
+        href: "#",
         content: "View details",
         link: "https://codered.eccouncil.org/certificate/b95e9fe9-3ade-4ccf-96c3-260d71cd2322?logged=",
         images: [
@@ -270,7 +265,174 @@ const about = {
           <span key="eccouncil-desc-5">Developed skills in identifying and analyzing security vulnerabilities</span>
         ],
       },
-      //certifcate#3
+      {
+        title: "Foundations of Cybersecurity",
+        href: "#",
+        content: "View details",
+        link: "https://coursera.org/share/d1e1e0fb01dc703700f0cb380c815435",
+        images: [
+          {
+            src: "/images/certificates/foundationsofcybersec.png",
+            alt: "foundationsofcybersecurity",
+            width: 22,
+            height: 17,
+          }
+        ],
+        description: [
+          <span key="google-desc-1">Completed Google's Foundations of Cybersecurity certification program</span>,
+          <span key="google-desc-2">Learned core cybersecurity concepts and terminology</span>,
+          <span key="google-desc-3">Gained understanding of security frameworks and compliance standards</span>,
+          <span key="google-desc-4">Studied common cyber threats, attacks, and defense mechanisms</span>,
+          <span key="google-desc-5">Developed foundational knowledge in security tools and technologies</span>
+        ],
+      },
+      {
+        title: "Introduction to Dark Web, Anonymity and Cryptocurrency",
+        href: "#",
+        content: "View details",
+        link: "https://codered.eccouncil.org/certificate/c8cc47fb-6875-4187-a62c-6f8c5acb598b?logged",
+        images: [
+          {
+            src: "/images/certificates/darkweb.png",
+            alt: "Dark Web Security Certificate",
+            width: 17,
+            height: 11,
+          }
+        ],
+        description: [
+          <span key="darkweb-desc-1">Mastered advanced concepts of dark web architecture, anonymity networks, and cryptocurrency fundamentals</span>,
+          <span key="darkweb-desc-2">Developed expertise in secure communication protocols, encryption methods, and privacy-preserving technologies</span>,
+          <span key="darkweb-desc-3">Gained comprehensive understanding of blockchain technology, cryptocurrency transactions, and digital forensics</span>,
+          <span key="darkweb-desc-4">Learned advanced threat intelligence gathering techniques and dark web monitoring methodologies</span>,
+          <span key="darkweb-desc-5">Acquired skills in implementing security measures for anonymous networks and cryptocurrency transactions</span>
+        ],
+      },
+      {
+        title: "Ethical Hacking by Hacking Real World Websites Legally",
+        href: "#",
+        content: "View details",
+        link: "https://codered.eccouncil.org/certificate/77f7f070-93aa-420f-b187-7ccd69f27f0b?logged=false",
+        images: [
+          {
+            src: "/images/certificates/ehbyhackingrealwebsites.png",
+            alt: "Ethical Hacking Real Websites Certificate", 
+            width: 17,
+            height: 11,
+          }
+        ],
+        description: [
+          <span key="realweb-desc-1">Conducted hands-on penetration testing on real-world websites under legal frameworks and ethical guidelines</span>,
+          <span key="realweb-desc-2">Mastered advanced web application security testing methodologies including OWASP Top 10 vulnerabilities assessment</span>,
+          <span key="realweb-desc-3">Developed expertise in identifying, analyzing, and exploiting web vulnerabilities using industry-standard tools and techniques</span>,
+          <span key="realweb-desc-4">Implemented comprehensive security solutions including secure coding practices, vulnerability remediation, and defensive strategies</span>,
+          <span key="realweb-desc-5">Gained practical experience in responsible disclosure and documentation of security findings to stakeholders</span>
+        ],
+      },
+      {
+        title: "Linux Commands & Shell Scripting",
+        href: "#",
+        content: "View details",
+        link: "https://coursera.org/share/6f85c42a0582b2be79cd7f551932acaa",
+        images: [
+          {
+            src: "/images/certificates/linuxcommands.png",
+            alt: "Linux Commands Certificate",
+            width: 22,
+            height: 17,
+          }
+        ],
+        description: [
+          <span key="linux-desc-1">Mastered advanced Linux command line operations including text processing, networking tools, and system monitoring</span>,
+          <span key="linux-desc-2">Developed expertise in system administration tasks including user management, package installation, and service configuration</span>,
+          <span key="linux-desc-3">Created complex shell scripts for process automation, backup solutions, and system maintenance tasks</span>,
+          <span key="linux-desc-4">Implemented robust security practices including access control, file permissions, and security auditing</span>,
+          <span key="linux-desc-5">Gained proficiency in bash scripting fundamentals, regular expressions, and advanced pipeline operations</span>
+        ],
+      },
+      {
+        title: "OWASP Top 10 for Docker Containers and Kubernetes Security",
+        href: "#",
+        content: "View details",
+        link: "https://codered.eccouncil.org/certificate/1238dc13-907b-4a16-a22d-8fb10e940e0c?logged=",
+        images: [
+          {
+            src: "/images/certificates/owasptop10.png",
+            alt: "OWASP Top 10 Certificate",
+            width: 17,
+            height: 11,
+          }
+        ],
+        description: [
+          <span key="owasp-desc-1">Mastered container security fundamentals and OWASP Top 10 vulnerabilities for containerized applications</span>,
+          <span key="owasp-desc-2">Gained expertise in securing Docker containers and Kubernetes clusters against common attack vectors</span>,
+          <span key="owasp-desc-3">Implemented security best practices for container orchestration and deployment pipelines</span>,
+          <span key="owasp-desc-4">Developed skills in container vulnerability scanning, runtime security, and compliance monitoring</span>,
+          <span key="owasp-desc-5">Learned advanced techniques for securing microservices architecture and container networking</span>
+        ],
+      },
+      {
+        title: "NDG Linux Unhatched",
+        href: "#",
+        content: "View details",
+        link: "https://www.netacad.com/certificates?issuanceId=4b75c911-b0f7-4abd-851f-b897f290f679",
+        images: [
+          {
+            src: "/images/certificates/NDG_Linux_Unhatched.png",
+            alt: "NDG Linux Unhatched Certificate",
+            width: 22,
+            height: 17,
+          }
+        ],
+        description: [
+          <span key="ndg-linux-desc-1">Completed comprehensive Linux fundamentals training through Cisco's Network Development Group</span>,
+          <span key="ndg-linux-desc-2">Mastered basic Linux system administration and command-line operations</span>,
+          <span key="ndg-linux-desc-3">Learned essential file system management and user administration concepts</span>,
+          <span key="ndg-linux-desc-4">Developed practical skills in Linux networking and security fundamentals</span>,
+          <span key="ndg-linux-desc-5">Gained hands-on experience with Linux package management and system configuration</span>
+        ],
+      }
+      // play it safe
+      ,{
+        title: "Play It Safe: Manage Security Risks by Google",
+        href: "#",
+        content: "View details",
+        link: "https://coursera.org/share/dbc74ea619688690190c348a460b15ba",
+        images: [
+          {
+            src: "/images/certificates/PlayItSafeManageSecurityRisksbygoogle.png",
+            alt: "Google Security Risks Management Certificate",
+            width: 22,
+            height: 17,
+          }
+        ],
+        description: [
+          <span key="google-security-desc-1">Completed Google's comprehensive security risk management program</span>,
+          <span key="google-security-desc-2">Mastered risk assessment methodologies and security frameworks</span>,
+          <span key="google-security-desc-3">Learned strategies for identifying, analyzing, and mitigating security threats</span>,
+          <span key="google-security-desc-4">Developed skills in security incident response and risk documentation</span>,
+          <span key="google-security-desc-5">Gained expertise in implementing security controls and compliance measures</span>
+        ],
+      }
+    ],
+    skills: [
+      {
+        title: "Programming Languages",
+        description: [
+          <span key="prog-lang-1">JavaScript/TypeScript</span>,
+          <span key="prog-lang-2">Python</span>,
+          <span key="prog-lang-3">Java</span>,
+        ],
+      },
+      {
+        title: "Security Tools",
+        description: [
+          <span key="sec-tools-1">Wireshark</span>,
+          <span key="sec-tools-2">Metasploit</span>,
+          <span key="sec-tools-3">Nmap</span>,
+          <span key="sec-tools-4">Burp Suite</span>,
+        ],
+      },
+      // Add more skills categories...
     ],
   },
 };
