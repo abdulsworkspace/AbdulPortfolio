@@ -10,7 +10,8 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: <span style={{ fontSize: "0.7em" }}>Software Engineer | Cyber Security Researcher</span>,
-  avatar: "/images/avatar.png",  // Changed from .jpg to .png
+  avatar: "/images/avatar.png", 
+  displayLocation: "Pakistan/Lahore", // Changed from .jpg to .png
   location: "Asia/Karachi",
   languages: ["English", "Urdu", "Punjabi"],
 };
@@ -213,20 +214,15 @@ const about = {
     title: "Skills & Certifications",
     skills: [
       {
-        title: "Ethical Hacker Certificate by CISCO",
+        title: "Ethical Hacker Liscense by CISCO",
         description: <>Completed comprehensive training in ethical hacking methodologies, network security, 
           and vulnerability assessment techniques. Certified by CISCO in 2023.</>,
-        // Updated credential link with your actual badge URL
-        credential: {
-          text: "View Credential",
-          url: "https://www.credly.com/badges/d9af35bf-fbd6-4c20-939c-e777359cf7ae/linked_in_profile",
-        },
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/images/skills/ethicalhackercisco.png",
+            alt: "Ethical Hacker by CISCO",
+            width: 12.5,  // Actual width of the PNG in pixels
+            height: 12.5,  // Actual height of the PNG in pixels
           },
           {
             src: "/images/projects/project-01/cover-03.jpg",
