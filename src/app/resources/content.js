@@ -39,22 +39,17 @@ const social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/abdulrehmansarwar", // Fixed LinkedIn URL format
+    link: "https://www.linkedin.com/in/abdulrehmansarwar",
   },
   {
     name: "Facebook",
-    icon: "facebook",
-    link: "https://facebook.com/abdulrehman.techie", // Simplified URL
+    icon: "facebook", // Make sure this matches exactly with the icon name in icons.ts
+    link: "https://facebook.com/abdulrehman.techie",
   },
   {
     name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/abdulrehman.techie/", // Simplified URL without www
-  },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
+    icon: "instagram", // Make sure this matches exactly with the icon name in icons.ts
+    link: "https://instagram.com/abdulrehman.techie",
   },
   {
     name: "Email",
