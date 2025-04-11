@@ -42,6 +42,16 @@ const social = [
     link: "https://www.linkedin.com/in/abdulrehmansarwar", // Fixed LinkedIn URL format
   },
   {
+    name: "Facebook",
+    icon: "facebook",
+    link: "https://facebook.com/abdulrehman.techie", // Simplified URL
+  },
+  {
+    name: "Instagram",
+    icon: "instagram",
+    link: "https://www.instagram.com/abdulrehman.techie/", // Simplified URL without www
+  },
+  {
     name: "X",
     icon: "x",
     link: "",
@@ -217,6 +227,16 @@ const about = {
         title: "Ethical Hacker Liscense by CISCO",
         description: <>Completed comprehensive training in ethical hacking methodologies, network security, 
           and vulnerability assessment techniques. Certified by CISCO in 2023.</>,
+        buttons: {
+          primary: {
+            text: "View Certificate",
+            link: "https://www.credly.com/badges/d9af35bf-fbd6-4c20-939c-e777359cf7ae/linked_in_profile"
+          },
+          secondary: {
+            text: "Read More",
+            link: "#"
+          }
+        },
         images: [
           {
             src: "/images/skills/ethicalhackercisco.png",
@@ -236,6 +256,16 @@ const about = {
         title: "Cyber Threat Intelligence (CTI)",
         description: <>Expertise in gathering intelligence, analyzing cyber threats, and mitigating risks 
           through advanced security techniques.</>,
+        buttons: {
+          primary: {
+            text: "View Details",
+            link: "#"
+          },
+          secondary: {
+            text: "Learn More",
+            link: "#"
+          }
+        },
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -250,6 +280,16 @@ const about = {
         title: "Cyber Security",
         description: <>Comprehensive knowledge in network security, endpoint protection, and data security.
         </>,
+        buttons: {
+          primary: {
+            text: "View Details",
+            link: "#"
+          },
+          secondary: {
+            text: "Learn More",
+            link: "#"
+          }
+        },
         images: [],
       },
       {
