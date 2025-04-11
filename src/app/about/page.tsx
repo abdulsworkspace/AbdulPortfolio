@@ -7,6 +7,7 @@ import {
   Icon,
   IconButton,
   SmartImage,
+  SmartLink,  // Add this import
   Tag,
   Text,
 } from "@/once-ui/components";
@@ -305,9 +306,15 @@ export default function About() {
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Text variant="heading-strong-l">{skill.title}</Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
-                    </Text>
+                    <Column as="ul" gap="16">
+                      <Text
+                        as="li"
+                        variant="body-default-m"
+                        onBackground="neutral-weak"
+                      >
+                        {skill.description}
+                      </Text>
+                    </Column>
                     {skill.images && skill.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" gap="12" wrap>
                         {skill.images.map((image, index) => (
@@ -329,9 +336,33 @@ export default function About() {
                               alt={image.alt}
                               //@ts-ignore
                               src={image.src}
+                              style={image.style}
                             />
                           </Flex>
                         ))}
+                      </Flex>
+                    )}
+                    {/* Add buttons section */}
+                    {(skill.content || skill.link) && (
+                      <Flex gap="24" wrap marginTop="m">
+                        {skill.content && (
+                          <SmartLink
+                            suffixIcon="arrowRight"
+                            style={{ margin: "0", width: "fit-content" }}
+                            href={skill.href || "#"}
+                          >
+                            <Text variant="body-default-s">{skill.content}</Text>
+                          </SmartLink>
+                        )}
+                        {skill.link && (
+                          <SmartLink
+                            suffixIcon="arrowUpRightFromSquare"
+                            style={{ margin: "0", width: "fit-content" }}
+                            href={skill.link}
+                          >
+                            <Text variant="body-default-s">View Credential</Text>
+                          </SmartLink>
+                        )}
                       </Flex>
                     )}
                   </Column>

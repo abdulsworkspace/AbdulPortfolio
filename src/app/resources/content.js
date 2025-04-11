@@ -215,169 +215,62 @@ const about = {
   },
   //TECHNICAL SKILLS SECTION
   technical: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Skills & Certifications",
     skills: [
       {
         title: "Ethical Hacker Liscense by CISCO",
-        description: <>Completed comprehensive training in ethical hacking methodologies, network security, 
-          and vulnerability assessment techniques. Certified by CISCO in 2023.</>,
-        buttons: {
-          primary: {
-            text: "View Certificate",
-            link: "https://www.credly.com/badges/d9af35bf-fbd6-4c20-939c-e777359cf7ae/linked_in_profile"
-          },
-          secondary: {
-            text: "Read More",
-            link: "#"
-          }
-        },
+        href: "#",  // Add this for the case study link
+        content: "View details",
+        link: "https://www.credly.com/badges/d9af35bf-fbd6-4c20-939c-e777359cf7ae/linked_in_profile",
         images: [
           {
-            src: "/images/skills/ethicalhackercisco.png",
+            src: "/images/certificates/ethicalhackercisco.png",
             alt: "Ethical Hacker by CISCO",
-            width: 12.5,  // Actual width of the PNG in pixels
-            height: 12.5,  // Actual height of the PNG in pixels
-          },
+            width: 11,
+            height: 11,
+          },  // Add comma here
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/certificates/ethicalhacker.png",
+            alt: "Ethical Hacker by CISCO",
             width: 16,
-            height: 9,
-          },
-        ],
-      }, // Added missing comma here
-      {
-        title: "Cyber Threat Intelligence (CTI)",
-        description: <>Expertise in gathering intelligence, analyzing cyber threats, and mitigating risks 
-          through advanced security techniques.</>,
-        buttons: {
-          primary: {
-            text: "View Details",
-            link: "#"
-          },
-          secondary: {
-            text: "Learn More",
-            link: "#"
+            height: 11,
           }
-        },
-        // optional: leave the array empty if you don't want to display images
+        ],
+        description: [
+          <span key="cisco-desc-1">Completed CISCO's comprehensive ethical hacking certification program</span>,
+          <span key="cisco-desc-2">Mastered network security fundamentals and penetration testing techniques</span>,
+          <span key="cisco-desc-3">Learned vulnerability assessment and exploitation methodologies</span>,
+          <span key="cisco-desc-4">Gained hands-on experience with industry-standard security tools</span>,
+          <span key="cisco-desc-5">Developed skills in identifying and mitigating cyber security threats</span>
+        ],
+      },
+      //certifcate#2
+      {
+        title: "Ethical Hacking Esssentials by EC-Council",
+        description: <>Completed comprehensive training in ethical hacking fundamentals through EC-Council's 
+          EHE program, covering essential cybersecurity concepts, attack vectors, and defense strategies. 
+          Earned certification from EC-Council demonstrating proficiency in ethical hacking principles.</>,
+        href: "#",  // Add this for the case study link
+        content: "View details",
+        link: "https://codered.eccouncil.org/certificate/b95e9fe9-3ade-4ccf-96c3-260d71cd2322?logged=",
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+            src: "/images/certificates/ehe_council.png",
+            alt: "Ethical Hacker by EC-Council",
+            width: 17,
+            height: 11,
+          }
+        ],
+        description: [
+          <span key="eccouncil-desc-1">Completed EC-Council's Essential Ethical Hacking (EHE) certification program</span>,
+          <span key="eccouncil-desc-2">Mastered fundamental cybersecurity concepts and methodologies</span>,
+          <span key="eccouncil-desc-3">Learned about common attack vectors and defense strategies</span>,
+          <span key="eccouncil-desc-4">Gained practical experience with security assessment tools</span>,
+          <span key="eccouncil-desc-5">Developed skills in identifying and analyzing security vulnerabilities</span>
         ],
       },
-      {
-        title: "Cyber Security",
-        description: <>Comprehensive knowledge in network security, endpoint protection, and data security.
-        </>,
-        buttons: {
-          primary: {
-            text: "View Details",
-            link: "#"
-          },
-          secondary: {
-            text: "Learn More",
-            link: "#"
-          }
-        },
-        images: [],
-      },
-      {
-        title: "Linux Administration",
-        description: <>Experienced in managing Linux-based systems, security configurations, and shell scripting.</>,
-        images: [],
-      },
-      {
-        title: "Networking",
-        description: <>Expert in network protocols, firewalls, and secure network architectures.</>,
-        images: [],
-      },
-      {
-        title: "Digital Forensics",
-        description: <>Skilled in data recovery, forensic analysis, and investigation of cyber incidents.</>,
-        images: [],
-      },
-      {
-        title: "Cryptography",
-        description: <>Understanding of encryption techniques, cryptographic protocols, and secure communication.
-        </>,
-        images: [],
-      },
-      {
-        title: "Metasploit",
-        description: <>Proficient in using Metasploit for penetration testing and vulnerability exploitation.</>,
-        images: [],
-      },
-      {
-        title: "OWASP Security",
-        description: <>Familiarity with OWASP Top 10 vulnerabilities and secure coding practices.</>,
-        images: [],
-      },
-      {
-        title: "Cyber Threat Hunting",
-        description: <>Active threat detection and response to mitigate potential cyberattacks.</>,
-        images: [],
-      },
-      {
-        title: "Cyber Operations",
-        description: <>Proficient in cyber warfare strategies and operational security measures.</>,
-        images: [],
-      },
-      {
-        title: "Database Management",
-        description: <>Experience with MySQL, PostgreSQL, and database security.</>,
-        images: [],
-      },
-      {
-        title: "Software Development",
-        description: <>Basic experience in C++, Java, and PHP for web and software applications.</>,
-        images: [],
-      },
-      {
-        title: "Web Security",
-        description: <>Knowledge of web application security vulnerabilities and protective measures.</>,
-        images: [],
-      },
-      {
-        title: "Shell Scripting",
-        description: <>Automating tasks and security processes using Bash and PowerShell.</>,
-        images: [],
-      },
-      {
-        title: "System Administration",
-        description: <>Managing IT infrastructure, monitoring systems, and implementing security protocols.</>,
-        images: [],
-      },
-      {
-        title: "CCNA Security",
-        description: <>Understanding of Cisco security principles and network hardening techniques.</>,
-        images: [],
-      },
-      {
-        title: "Technical Support",
-        description: <>Providing IT support, troubleshooting, and system diagnostics.</>,
-        images: [],
-      },
-      {
-        title: "Project Management",
-        description: <>Experienced in leading teams, managing projects, and executing strategic initiatives.</>,
-        images: [],
-      },
-      {
-        title: "Public Speaking & Leadership",
-        description: <>Strong communication skills and leadership in cybersecurity and tech communities.</>,
-        images: [],
-      },
-      {
-        title: "Marketing Management",
-        description: <>Expertise in digital marketing, branding, and strategic campaigns.</>,
-        images: [],
-      },
+      //certifcate#3
     ],
   },
 };
