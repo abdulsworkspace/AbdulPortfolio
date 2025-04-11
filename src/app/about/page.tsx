@@ -63,7 +63,12 @@ export default function About() {
       items: about.studies.institutions.map((institution) => institution.name),
     },
     {
-      title: about.technical.title,
+      title: "Certifications",
+      display: about.technical.display,
+      items: about.technical.certifications.map((cert) => cert.title),
+    },
+    {
+      title: "Technical Skills",
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
     },
@@ -294,47 +299,41 @@ export default function About() {
 
           {about.technical.display && (
             <>
-              <Heading
-                as="h2"
-                id={about.technical.title}
-                variant="display-strong-s"
-                marginBottom="40"
-              >
-                {about.technical.title}
+              <Heading as="h2" id="Certifications" variant="display-strong-s" marginBottom="m">
+                Certifications
               </Heading>
-              <Column fillWidth gap="l">
-                {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text variant="heading-strong-l">{skill.title}</Text>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.technical.certifications?.map((cert, index) => (
+                  <Column key={`certification-${index}`} fillWidth gap="4">
+                    <Text variant="heading-strong-l">{cert.title}</Text>
                     <Column as="ul" gap="16">
-                      <Text
-                        as="li"
-                        variant="body-default-m"
-                        onBackground="neutral-weak"
-                      >
-                        {skill.description}
-                      </Text>
+                      {Array.isArray(cert.description) && cert.description.map((desc, i) => (
+                        <Text
+                          as="li"
+                          key={`cert-desc-${index}-${i}`}
+                          variant="body-default-m"
+                          onBackground="neutral-weak"
+                        >
+                          {desc}
+                        </Text>
+                      ))}
                     </Column>
-                    {skill.images && skill.images.length > 0 && (
+                    {/* Rest of certificate rendering */}
+                    {cert.images && cert.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
+                        {cert.images.map((image, index) => (
                           <Flex
                             key={index}
                             border="neutral-medium"
                             radius="m"
-                            //@ts-ignore
                             minWidth={image.width}
-                            //@ts-ignore
                             height={image.height}
                           >
                             <SmartImage
                               enlarge
                               radius="m"
-                              //@ts-ignore
                               sizes={image.width.toString()}
-                              //@ts-ignore
                               alt={image.alt}
-                              //@ts-ignore
                               src={image.src}
                               style={image.style}
                             />
@@ -342,29 +341,61 @@ export default function About() {
                         ))}
                       </Flex>
                     )}
-                    {/* Add buttons section */}
-                    {(skill.content || skill.link) && (
+                    {(cert.content || cert.link) && (
                       <Flex gap="24" wrap marginTop="m">
-                        {skill.content && (
+                        {cert.content && (
                           <SmartLink
                             suffixIcon="arrowRight"
                             style={{ margin: "0", width: "fit-content" }}
-                            href={skill.href || "#"}
+                            href={cert.href || "#"}
                           >
-                            <Text variant="body-default-s">{skill.content}</Text>
+                            <Text variant="body-default-s">{cert.content}</Text>
                           </SmartLink>
                         )}
-                        {skill.link && (
+                        {cert.link && (
                           <SmartLink
                             suffixIcon="arrowUpRightFromSquare"
                             style={{ margin: "0", width: "fit-content" }}
-                            href={skill.link}
+                            href={cert.link}
                           >
                             <Text variant="body-default-s">View Credential</Text>
                           </SmartLink>
                         )}
                       </Flex>
                     )}
+                  </Column>
+                ))}
+              </Column>
+
+              <Heading as="h2" id="Technical Skills" variant="display-strong-s" marginBottom="m">
+                Technical Skills
+              </Heading>
+              <Column fillWidth gap="l">
+                {about.technical.skills.map((skill, index) => (
+                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                    <Text variant="heading-strong-l">{skill.title}</Text>
+                    <Column as="ul" gap="16">
+                      {Array.isArray(skill.description) ? (
+                        skill.description.map((desc, i) => (
+                          <Text
+                            as="li"
+                            key={`${skill.title}-desc-${i}`}
+                            variant="body-default-m"
+                            onBackground="neutral-weak"
+                          >
+                            {desc}
+                          </Text>
+                        ))
+                      ) : (
+                        <Text
+                          as="li"
+                          variant="body-default-m"
+                          onBackground="neutral-weak"
+                        >
+                          {skill.description}
+                        </Text>
+                      )}
+                    </Column>
                   </Column>
                 ))}
               </Column>
