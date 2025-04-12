@@ -23,12 +23,13 @@ export const Footer = () => {
         horizontal="space-between"
         vertical="center"
       >
-        <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear} </Text>
-          <Text paddingX="4">{person.name}</Text>
+        <Text variant="body-default-xs" onBackground="neutral-strong" style={{ letterSpacing: '-0.02em' }}>
+          <Text onBackground="neutral-weak">©{currentYear}</Text>
+          <SmartLink href="/" style={{ textDecoration: 'none' }}>
+            <Text paddingX="2" style={{ color: '#4ade80' }}>{person.name}</Text>
+          </SmartLink>
           <Text onBackground="neutral-weak">
-            {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-             Developed by using {" "}
+            Developed by using{" "}
             <SmartLink
               style={{ marginLeft: "-0.125rem" }}
               href="https://once-ui.com/templates/magic-portfolio"
