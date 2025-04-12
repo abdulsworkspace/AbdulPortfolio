@@ -218,7 +218,28 @@ const about = {
     display: true,
     certifications: [
       {
-        title: "Ethical Hacker Liscense by CISCO",
+        title: "Cybersecurity Training Workshop - Digital Pakistan",
+        href: "#",
+        content: "View details",
+        link: "https://drive.google.com/file/d/1pbDEGiXLVldfwmPKtjc48QHGsudC6taU/view?usp=drive_link",
+        images: [
+          {
+            src: "/images/certificates/cybersecurity-workshop-2024.png",
+            alt: "Cybersecurity Training Workshop Certificate and Hackathon by Ignite and TrilliumInfoSec",
+            width: 24,
+            height: 17,
+          }
+        ],
+        description: [
+          <span key="cyber-workshop-desc-1">Participated in intensive cybersecurity training workshop organized by Digital Pakistan</span>,
+          <span key="cyber-workshop-desc-2">Gained hands-on experience with latest cybersecurity tools and techniques</span>,
+          <span key="cyber-workshop-desc-3">Learned about emerging cyber threats and defense strategies</span>,
+          <span key="cyber-workshop-desc-4">Enhanced practical skills in cybersecurity through workshop exercises</span>,
+          <span key="cyber-workshop-desc-5">Networked with industry professionals and cybersecurity experts</span>
+        ],
+      },
+      {
+        title: "Ethical Hacker License by CISCO",
         href: "#",
         content: "View details",
         link: "https://www.credly.com/badges/d9af35bf-fbd6-4c20-939c-e777359cf7ae/linked_in_profile",
@@ -390,9 +411,9 @@ const about = {
           <span key="ndg-linux-desc-4">Developed practical skills in Linux networking and security fundamentals</span>,
           <span key="ndg-linux-desc-5">Gained hands-on experience with Linux package management and system configuration</span>
         ],
-      }
+      },
       // play it safe
-      ,{
+      {
         title: "Play It Safe: Manage Security Risks by Google",
         href: "#",
         content: "View details",
@@ -412,7 +433,34 @@ const about = {
           <span key="google-security-desc-4">Developed skills in security incident response and risk documentation</span>,
           <span key="google-security-desc-5">Gained expertise in implementing security controls and compliance measures</span>
         ],
-      }
+      },  // <-- Add comma here
+      {
+        title: "CCNA: Enterprise Networking, Security and Automation",
+        href: "#",
+        content: "View details",
+        link: "https://www.credly.com/badges/d9af35bf-fbd6-4c20-939c-e777359cf7ae/linked_in_profile",
+        images: [
+          {
+            src: "/images/certificates/ccna-enterprise.png",
+            alt: "CCNA Enterprise Certificate",
+            width: 11,
+            height: 11,
+          },
+          {
+            src: "/images/certificates/ccna-enterprise-cert.png",
+            alt: "CCNA Badge",
+            width: 16,
+            height: 11,
+          }
+        ],
+        description: [
+          <span key="cisco-desc-1">Completed Cisco's comprehensive CCNA Enterprise certification program</span>,
+          <span key="cisco-desc-2">Mastered enterprise networking fundamentals including routing, switching, and wireless essentials</span>,
+          <span key="cisco-desc-3">Gained expertise in network security, automation, and programmability</span>,
+          <span key="cisco-desc-4">Developed practical skills in configuring and troubleshooting enterprise networks</span>,
+          <span key="cisco-desc-5">Learned advanced concepts in network architecture, security policies, and automation tools</span>
+        ],
+      },
     ],
     skills: [
       {
