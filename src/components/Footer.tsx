@@ -23,22 +23,22 @@ export const Footer = () => {
         horizontal="space-between"
         vertical="center"
       >
-        <Text variant="body-default-s" onBackground="neutral-strong">
+        <Text variant="body-default-s" onBackground="neutral-strong" style={{ textAlign: 'center' }}>
           <Text onBackground="neutral-weak">© {currentYear} </Text>
-          <SmartLink href="/" style={{ textDecoration: 'none', marginRight: '4px' }}>
-            <Text>Abdul Rehman</Text>
+          <SmartLink href="/" style={{ textDecoration: 'none' }}>
+            <Text style={{ color: '#4ade80' }}>{person.name}</Text>
           </SmartLink>
-          <Text onBackground="neutral-weak" style={{ display: 'inline-flex', alignItems: 'center', flexWrap: 'wrap' }}>
-            • All Rights Reserved
-            <Text style={{ width: '100%', margin: '4px 0' }}>
-              Developed by Abdul Rehman • Built with{" "}
-              <SmartLink
-                style={{ marginLeft: "2px" }}
-                href="https://once-ui.com/templates/magic-portfolio"
-              >
-                Once UI
-              </SmartLink>
-            </Text>
+          <Text onBackground="neutral-weak" style={{ display: 'block', margin: '4px 0' }}>
+            All Rights Reserved
+          </Text>
+          <Text onBackground="neutral-weak">
+            Developed by Abdul Rehman • Built with{" "}
+            <SmartLink
+              style={{ color: '#4ade80' }}
+              href="https://once-ui.com/templates/magic-portfolio"
+            >
+              Once UI
+            </SmartLink>
           </Text>
         </Text>
         <Flex gap="16">
