@@ -29,7 +29,7 @@ export const Footer = () => {
             <Text>{person.name}</Text>
           </SmartLink>
           <Text onBackground="neutral-weak" style={{ display: 'inline-flex', alignItems: 'center' }}>
-            • All Rights Reserved | Built with{" "}
+            • All Rights Reserved | Developed by Abdul Rehman | Built with{" "}
             <SmartLink
               style={{ marginLeft: "4px" }}
               href="https://once-ui.com/templates/magic-portfolio"
