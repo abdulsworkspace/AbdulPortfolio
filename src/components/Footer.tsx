@@ -20,10 +20,11 @@ export const Footer = () => {
         paddingY="8"
         paddingX="16"
         gap="16"
-        horizontal="space-between"
+        horizontal="center"
         vertical="center"
+        direction="column"
       >
-        <Text variant="body-default-s" onBackground="neutral-strong" style={{ textAlign: 'center' }}>
+        <Text variant="body-default-s" onBackground="neutral-strong" style={{ textAlign: 'center', marginBottom: '16px' }}>
           <Text onBackground="neutral-weak">© {currentYear} </Text>
           <SmartLink href="/" style={{ textDecoration: 'none' }}>
             <Text style={{ color: '#4ade80' }}>{person.name}</Text>
@@ -41,7 +42,7 @@ export const Footer = () => {
             </SmartLink>
           </Text>
         </Text>
-        <Flex gap="16">
+        <Flex gap="16" horizontal="center">
           {social.map(
             (item) =>
               item.link && (
