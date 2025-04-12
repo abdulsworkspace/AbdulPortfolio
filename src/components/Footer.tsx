@@ -24,18 +24,21 @@ export const Footer = () => {
         vertical="center"
       >
         <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear}</Text>
-          <SmartLink href="/" style={{ textDecoration: 'none', margin: '0 8px' }}>
-            <Text>{person.name}</Text>
+          <Text onBackground="neutral-weak">© {currentYear} </Text>
+          <SmartLink href="/" style={{ textDecoration: 'none', marginRight: '4px' }}>
+            <Text>Abdul Rehman</Text>
           </SmartLink>
-          <Text onBackground="neutral-weak" style={{ display: 'inline-flex', alignItems: 'center' }}>
-            • All Rights Reserved | Developed by Abdul Rehman | Built with{" "}
-            <SmartLink
-              style={{ marginLeft: "4px" }}
-              href="https://once-ui.com/templates/magic-portfolio"
-            >
-              Once UI
-            </SmartLink>
+          <Text onBackground="neutral-weak" style={{ display: 'inline-flex', alignItems: 'center', flexWrap: 'wrap' }}>
+            • All Rights Reserved
+            <Text style={{ width: '100%', margin: '4px 0' }}>
+              Developed by Abdul Rehman • Built with{" "}
+              <SmartLink
+                style={{ marginLeft: "2px" }}
+                href="https://once-ui.com/templates/magic-portfolio"
+              >
+                Once UI
+              </SmartLink>
+            </Text>
           </Text>
         </Text>
         <Flex gap="16">
