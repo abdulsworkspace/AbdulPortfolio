@@ -25,29 +25,38 @@ export const Footer = () => {
         mobileDirection="column"      // Stack content on mobile
       >
         <Flex 
-          direction={{ default: 'row', s: 'column' }}  // Row on desktop, column on mobile
-          gap={{ default: '1', s: '0' }}              // Different spacing for mobile/desktop
+          direction="row"
+          gap="1"
           horizontal="center"
           style={{ 
             textAlign: 'center', 
             fontSize: '11px',
             opacity: 0.8,
-            lineHeight: { default: '1.5', s: '1.8' }  // Increased line height for mobile
+            lineHeight: '1.5',
+            display: 'flex',
+            flexDirection: 'row',
+            gap: '4px'
           }}
         >
-          {/* Copyright and name group - stays in row for both views */}
-          <Flex direction="row" gap="1" style={{ marginBottom: { s: '2px', default: '0' } }}>
+          <Flex 
+            direction="row" 
+            gap="1" 
+            style={{ 
+              marginBottom: '0'
+            }}
+          >
+            {/* Copyright and name group */}
             <Text onBackground="neutral-weak" style={{ fontSize: 'inherit' }}>© {currentYear}</Text>
             <SmartLink href="/" style={{ textDecoration: 'none' }}>
               <Text style={{ color: '#4ade80', fontSize: 'inherit' }}>{person.name}</Text>
             </SmartLink>
           </Flex>
 
-          {/* Footer text items - stack on mobile, inline on desktop */}
-          <Text onBackground="neutral-weak" style={{ fontSize: 'inherit', marginBottom: { s: '4px', default: '0' } }}>
+          {/* Footer text items */}
+          <Text onBackground="neutral-weak" style={{ fontSize: 'inherit', marginBottom: '4px' }}>
             • All Rights Reserved
           </Text>
-          <Text onBackground="neutral-weak" style={{ fontSize: 'inherit', marginBottom: { s: '4px', default: '0' } }}>
+          <Text onBackground="neutral-weak" style={{ fontSize: 'inherit', marginBottom: '4px' }}>
             • Developed by Abdul Rehman
           </Text>
           <Text onBackground="neutral-weak" style={{ fontSize: 'inherit' }}>
@@ -62,7 +71,7 @@ export const Footer = () => {
         </Flex>
 
         {/* Social icons - centered on mobile, end-aligned on desktop */}
-        <Flex gap="12" horizontal="center" style={{ marginTop: { s: '16px', default: '0' } }}>
+        <Flex gap="12" horizontal="center" style={{ marginTop: '0' }}>
           {social.map(
             (item) =>
               item.link && (
