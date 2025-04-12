@@ -12,66 +12,32 @@ export const Footer = () => {
       fillWidth
       padding="8"
       horizontal="center"
-      mobileDirection="column"    // Stacks content vertically on mobile
+      mobileDirection="column"
     >
       <Flex
         className={styles.mobile}
         maxWidth="m"
-        paddingY="4"
+        paddingY="8"
         paddingX="16"
-        gap="8"
-        horizontal="space-between"    // Space between text and social icons
+        gap="16"
+        horizontal="space-between"
         vertical="center"
-        mobileDirection="column"      // Stack content on mobile
       >
-        <Flex 
-          direction="row"
-          gap="1"
-          horizontal="center"
-          style={{ 
-            textAlign: 'center', 
-            fontSize: '11px',
-            opacity: 0.8,
-            lineHeight: '1.5',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '4px'
-          }}
-        >
-          <Flex 
-            direction="row" 
-            gap="1" 
-            style={{ 
-              marginBottom: '0'
-            }}
-          >
-            {/* Copyright and name group */}
-            <Text onBackground="neutral-weak" style={{ fontSize: 'inherit' }}>© {currentYear}</Text>
-            <SmartLink href="/" style={{ textDecoration: 'none' }}>
-              <Text style={{ color: '#4ade80', fontSize: 'inherit' }}>{person.name}</Text>
-            </SmartLink>
-          </Flex>
-
-          {/* Footer text items */}
-          <Text onBackground="neutral-weak" style={{ fontSize: 'inherit', marginBottom: '4px' }}>
-            • All Rights Reserved
-          </Text>
-          <Text onBackground="neutral-weak" style={{ fontSize: 'inherit', marginBottom: '4px' }}>
-            • Developed by Abdul Rehman
-          </Text>
-          <Text onBackground="neutral-weak" style={{ fontSize: 'inherit' }}>
-            • Built with{" "}
+        <Text variant="body-default-s" onBackground="neutral-strong">
+          <Text onBackground="neutral-weak">© {currentYear} </Text>
+          <Text paddingX="4">{person.name}</Text>
+          <Text onBackground="neutral-weak">
+            {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
+             Developed by using {" "}
             <SmartLink
-              style={{ color: '#4ade80' }}
+              style={{ marginLeft: "-0.125rem" }}
               href="https://once-ui.com/templates/magic-portfolio"
             >
               Once UI
             </SmartLink>
           </Text>
-        </Flex>
-
-        {/* Social icons - centered on mobile, end-aligned on desktop */}
-        <Flex gap="12" horizontal="center" style={{ marginTop: '0' }}>
+        </Text>
+        <Flex gap="16">
           {social.map(
             (item) =>
               item.link && (
@@ -87,8 +53,6 @@ export const Footer = () => {
           )}
         </Flex>
       </Flex>
-
-      {/* Mobile-only bottom spacing */}
       <Flex height="80" show="s"></Flex>
     </Flex>
   );
