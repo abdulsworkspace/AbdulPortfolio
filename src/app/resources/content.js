@@ -329,7 +329,7 @@ const about = {
         ],
       },
       {
-        title: "Ethical Hacking by Hacking Real World Websites Legally",
+        title: "Ethical Hacking by Hacking Real Websites Legally",
         href: "#",
         content: "View details",
         link: "https://codered.eccouncil.org/certificate/77f7f070-93aa-420f-b187-7ccd69f27f0b?logged=false",
@@ -433,34 +433,34 @@ const about = {
           <span key="google-security-desc-4">Developed skills in security incident response and risk documentation</span>,
           <span key="google-security-desc-5">Gained expertise in implementing security controls and compliance measures</span>
         ],
-      },  // <-- Add comma here
+      },
       {
         title: "CCNA: Enterprise Networking, Security and Automation",
         href: "#",
         content: "View details",
-        link: "https://www.credly.com/badges/d9af35bf-fbd6-4c20-939c-e777359cf7ae/linked_in_profile",
+        link: "https://www.credly.com/badges/4f1685b3-b745-48ee-92ff-e97772c0accd",
         images: [
           {
             src: "/images/certificates/ccna-enterprise.png",
-            alt: "CCNA Enterprise Certificate",
+            alt: "CCNA Enterprise Certification Badge",
             width: 11,
             height: 11,
           },
           {
-            src: "/images/certificates/ccna-enterprise-cert.png",
-            alt: "CCNA Badge",
+            src: "/images/certificates/ccna-enterprise-cert.png", 
+            alt: "CCNA Enterprise Certificate",
             width: 16,
             height: 11,
           }
         ],
         description: [
-          <span key="cisco-desc-1">Completed Cisco's comprehensive CCNA Enterprise certification program</span>,
-          <span key="cisco-desc-2">Mastered enterprise networking fundamentals including routing, switching, and wireless essentials</span>,
-          <span key="cisco-desc-3">Gained expertise in network security, automation, and programmability</span>,
-          <span key="cisco-desc-4">Developed practical skills in configuring and troubleshooting enterprise networks</span>,
-          <span key="cisco-desc-5">Learned advanced concepts in network architecture, security policies, and automation tools</span>
+          <span key="ccna-desc-1">Successfully completed Cisco's industry-leading CCNA Enterprise certification program, demonstrating comprehensive networking expertise</span>,
+          <span key="ccna-desc-2">Mastered advanced enterprise networking concepts including SDN, network virtualization, and QoS implementation</span>,
+          <span key="ccna-desc-3">Developed deep expertise in network security protocols, automation frameworks, and modern programmability techniques</span>,
+          <span key="ccna-desc-4">Acquired hands-on experience in designing, implementing, and troubleshooting complex enterprise network infrastructures</span>,
+          <span key="ccna-desc-5">Demonstrated proficiency in network architecture design, security policy implementation, and cutting-edge automation solutions</span>
         ],
-      },
+      }
     ],
     skills: [
       {
