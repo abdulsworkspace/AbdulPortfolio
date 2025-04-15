@@ -45,6 +45,54 @@ export async function generateMetadata() {
   };
 }
 
+// Move interfaces to the top, after imports
+interface Experience {
+  company: string;
+  role: string;
+  timeframe: string;
+  achievements: JSX.Element[];
+  images: Array<{
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    style?: React.CSSProperties;
+  }>;
+}
+
+interface Institution {
+  name: string;
+  description: string;
+}
+
+interface Certification {
+  title: string;
+  href?: string;
+  content?: string;
+  link?: string;
+  description: JSX.Element[];
+  images?: Array<{
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    style?: React.CSSProperties;
+  }>;
+}
+
+interface Skill {
+  title: string;
+  icon: string;
+  description: JSX.Element[] | string;
+}
+
+interface SocialItem {
+  name: string;
+  icon: string;
+  link: string;
+}
+
+// Keep only one export default function
 export default function About() {
   const structure = [
     {
@@ -373,7 +421,10 @@ export default function About() {
               <Column fillWidth gap="l">
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text variant="heading-strong-l">{skill.title}</Text>
+                    <Flex gap="12" vertical="center">
+                      <Icon name={skill.icon} size="24" />
+                      <Text variant="heading-strong-l">{skill.title}</Text>
+                    </Flex>
                     <Column as="ul" gap="16">
                       {Array.isArray(skill.description) ? (
                         skill.description.map((desc, i) => (
