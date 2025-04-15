@@ -422,7 +422,7 @@ export default function About() {
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Flex gap="12" vertical="center">
-                      <Icon name={skill.icon} size="24" />
+                      <Icon name={skill.icon} size="m" />
                       <Text variant="heading-strong-l">{skill.title}</Text>
                     </Flex>
                     <Column as="ul" gap="16">
