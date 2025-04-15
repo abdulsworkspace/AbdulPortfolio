@@ -24,12 +24,16 @@ export const Footer = () => {
         vertical="center"
       >
         <Text variant="body-default-xs" onBackground="neutral-strong" style={{ letterSpacing: '-0.01em' }}>
-          <Text onBackground="neutral-weak">©{currentYear}</Text>
-          <SmartLink href="/" style={{ textDecoration: 'none' }}>
-            <Text paddingX="2" style={{ color: '#4ade80' }}>{person.name}</Text>
-          </SmartLink>
-          <Text onBackground="neutral-weak">
-            Developed by <Text> {person.name} </Text> using{" "}
+          <Text onBackground="neutral-strong">©{currentYear}</Text>
+          <Text paddingX="2" onBackground="neutral-strong">
+            <SmartLink href="/" style={{ textDecoration: 'none' }}>
+              {person.name}
+            </SmartLink>
+          </Text>
+          <Text onBackground="neutral-strong">
+            Developed by{" "}
+            <Text>{person.name}</Text>
+            {" "}using{" "}
             <SmartLink
               style={{ marginLeft: "-0.125rem" }}
               href="https://once-ui.com/templates/magic-portfolio"
