@@ -97,7 +97,39 @@ const about = {
       </>
     ),
   },
-  //WORK EXPERIENCE SECTION
+  techStack: {
+    display: true,
+    icons: [
+      {
+        name: "Cyber Security",
+        icon: "skillShield",
+      },
+      {
+        name: "VS Code",
+        icon: "vscode",
+      },
+      {
+        name: "Flutter",
+        icon: "flutter",
+      },
+      {
+        name: "React",
+        icon: "react",
+      },
+      {
+        name: "C++",
+        icon: "cpp",
+      },
+      {
+        name: "Java",
+        icon: "java",
+      },
+      {
+        name: "AI",
+        icon: "ai",
+      },
+    ],
+  },
   work: {
     display: true, // set to false to hide this section
     title: "Work Experience",
@@ -464,23 +496,91 @@ const about = {
     ],
     skills: [
       {
-        title: "Programming Languages",
+        title: "Cybersecurity & Hacking",
+        icon: "skillShield",
         description: [
-          <span key="prog-lang-1">JavaScript/TypeScript</span>,
-          <span key="prog-lang-2">Python</span>,
-          <span key="prog-lang-3">Java</span>,
+          <span key="cyber-1">Ethical Hacking: Penetration Testing, Vulnerability Assessment, Metasploit Framework</span>,
+          <span key="cyber-2">OWASP Top 10, Cyber Threat Hunting (CTH), Cyber Threat Intelligence (CTI)</span>,
+          <span key="cyber-3">Network Security: CCNA, Network Administration, Packet Analysis</span>,
+          <span key="cyber-4">System Security: Information Security Management, Security Policies, Risk Management</span>,
+          <span key="cyber-5">Dark Web & Anonymity: Cryptocurrency, Blockchain, Tor Network</span>
         ],
       },
       {
-        title: "Security Tools",
+        title: "Programming & Development",
+        icon: "skillCode",
         description: [
-          <span key="sec-tools-1">Wireshark</span>,
-          <span key="sec-tools-2">Metasploit</span>,
-          <span key="sec-tools-3">Nmap</span>,
-          <span key="sec-tools-4">Burp Suite</span>,
+          <span key="prog-1">Languages: C++, Java, Dart, PHP, Bash/Shell Scripting, HTML/CSS</span>,
+          <span key="prog-2">Frameworks: Flutter, Laravel, Linux CLI</span>,
+          <span key="prog-3">Version Control: Git & GitHub</span>,
+          <span key="prog-4">Databases: MySQL, SQLite, Database Normalization</span>
         ],
       },
-      // Add more skills categories...
+      {
+        title: "Systems & Tools",
+        icon: "skillTerminal",
+        description: [
+          <span key="sys-1">Linux Ecosystem: Kali Linux, GNU/Linux, Ubuntu, Debian</span>,
+          <span key="sys-2">Security Tools: Metasploit, Nmap, Wireshark, Burp Suite</span>,
+          <span key="sys-3">Advanced Tools: John the Ripper, Hydra</span>
+        ],
+      },
+      {
+        title: "Project Management",
+        icon: "skillDoc",
+        description: [
+          <span key="pm-1">Team Building & Management, Project Planning & Execution</span>,
+          <span key="pm-2">Hackathon & CTF Team Leadership</span>,
+          <span key="pm-3">Tools: Google Sheets, Budgeting, Agile Methodologies</span>,
+          <span key="pm-4">Task Prioritization and Delegation</span>
+        ],
+      },
+      {
+        title: "IT Operations",
+        icon: "skillServer",
+        description: [
+          <span key="it-1">System Administration & Technical Support</span>,
+          <span key="it-2">Software Troubleshooting & Local Server Hosting</span>,
+          <span key="it-3">Asset Tracking & Management</span>
+        ],
+      },
+      {
+        title: "Marketing & Design",
+        icon: "skillDesign",
+        description: [
+          <span key="md-1">Digital Marketing: Campaign Planning, Content Strategy</span>,
+          <span key="md-2">Design Tools: Canva, Adobe Photoshop (Basic)</span>,
+          <span key="md-3">Media Production: Video Editing, Basic Photography</span>
+        ],
+      },
+      {
+        title: "Business Operations",
+        icon: "skillDoc",
+        description: [
+          <span key="bo-1">Vehicle Booking & Customer Management</span>,
+          <span key="bo-2">Deal Pricing & Invoicing System Design</span>,
+          <span key="bo-3">Expense Management & Reconciliation</span>
+        ],
+      },
+      {
+        title: "Analytical Skills",
+        icon: "skillAnalytics",
+        description: [
+          <span key="as-1">Data Analysis: Excel/Google Sheets, Report Generation</span>,
+          <span key="as-2">Research & Documentation</span>,
+          <span key="as-3">Certification Preparation & Academic Support</span>
+        ],
+      },
+      {
+        title: "Soft Skills",
+        icon: "skillTeam",
+        description: [
+          <span key="ss-1">Leadership & Emotional Intelligence</span>,
+          <span key="ss-2">Team Communication & Public Speaking</span>,
+          <span key="ss-3">Languages: Urdu & English Proficiency</span>,
+          <span key="ss-4">Conflict Resolution & Diplomacy</span>
+        ],
+      }
     ],
   },
 };

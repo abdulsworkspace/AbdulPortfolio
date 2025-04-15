@@ -23,6 +23,18 @@ import {
   HiArrowRight,
   HiOutlineEye,
   HiOutlineEyeSlash,
+  HiShieldCheck,
+  HiCodeBracket,
+  HiCommandLine,
+  HiChartBar,
+  HiServerStack,
+  HiPhoto,
+  HiDocumentText,
+  HiChartPie,
+  HiUserGroup,
+  HiComputerDesktop,
+  HiWrench,
+  HiClipboardDocument,
 } from "react-icons/hi2";
 
 import {
@@ -33,9 +45,19 @@ import {
   PiImageDuotone,
 } from "react-icons/pi";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
+import { 
+  FaDiscord, 
+  FaGithub, 
+  FaLinkedin, 
+  FaXTwitter, 
+  FaFacebook, 
+  FaInstagram 
+} from "react-icons/fa6";
+
+
 
 export const iconLibrary: Record<string, IconType> = {
+  // Remove duplicate entries and ensure each icon has a unique key
   chevronUp: HiChevronUp,
   chevronDown: HiChevronDown,
   chevronRight: HiChevronRight,
@@ -51,23 +73,41 @@ export const iconLibrary: Record<string, IconType> = {
   checkCircle: HiCheckCircle,
   email: HiEnvelope,
   globe: HiMiniGlobeAsiaAustralia,
-  person: PiUserCircleDuotone,
-  grid: PiGridFourDuotone,
-  book: PiBookBookmarkDuotone,
+  calendar: HiCalendarDays,
   close: HiMiniXMark,
   openLink: HiOutlineLink,
-  calendar: HiCalendarDays,
-  home: PiHouseDuotone,
-  gallery: PiImageDuotone,
-  discord: FaDiscord,
   eye: HiOutlineEye,
   eyeOff: HiOutlineEyeSlash,
-  // Social Media Icons - ensure these are at the top level
+  
+  // Social icons
   github: FaGithub,
   linkedin: FaLinkedin,
   facebook: FaFacebook,
   instagram: FaInstagram,
+  discord: FaDiscord,
   x: FaXTwitter,
-  clipboard: HiClipboard,
+
+  // Navigation icons
+  home: PiHouseDuotone,
+  grid: PiGridFourDuotone,
+  book: PiBookBookmarkDuotone,
+  person: PiUserCircleDuotone,
+  gallery: PiImageDuotone,
+
+  // Skill section icons
+  skillShield: HiShieldCheck,
+  skillCode: HiCodeBracket,
+  skillTerminal: HiCommandLine,
+  skillServer: HiServerStack,
+  skillDesign: HiPhoto,
+  skillDoc: HiDocumentText,
+  skillAnalytics: HiChartPie,
+  skillTeam: HiUserGroup,
+  skillTools: HiWrench,
+  
+  // Action icons
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
+  
+  // Tech Stack icons
+
 };
