@@ -91,9 +91,10 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Abdul Rehman is a passionate software engineer and cyber security researcher dedicated to
-        building secure, scalable solutions. His expertise spans full-stack development, penetration
-        testing, and implementing robust security measures to protect digital assets.
+        Abdul Rehman is a dedicated software engineer and cyber security researcher focused on 
+        building secure, scalable solutions. His expertise spans full-stack development and 
+        advanced penetration testing, combining technical excellence with robust security 
+        principles to deliver high-quality, protected digital solutions.
       </>
     ),
   },
@@ -101,32 +102,28 @@ const about = {
     display: true,
     icons: [
       {
-        name: "Cyber Security",
-        icon: "skillShield",
+        icon: "/images/icons/linux.ico"
       },
       {
-        name: "VS Code",
-        icon: "vscode",
+        icon: "/images/icons/vscode.ico"
       },
       {
-        name: "Flutter",
-        icon: "flutter",
+        icon: "/images/icons/c++.ico"
       },
       {
-        name: "React",
-        icon: "react",
+        icon: "/images/icons/java.ico"
       },
       {
-        name: "C++",
-        icon: "cpp",
+        icon: "/images/icons/react.ico"
       },
       {
-        name: "Java",
-        icon: "java",
+        icon: "/images/icons/flutter.ico"
       },
       {
-        name: "AI",
-        icon: "ai",
+        icon: "/images/icons/firebase.ico"
+      },
+      {
+        icon: "/images/icons/copoilet.ico"
       },
     ],
   },
