@@ -15,6 +15,7 @@ import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
+import Image from 'next/image';
 
 export async function generateMetadata() {
   const title = about.title;
@@ -261,6 +262,34 @@ export default function About() {
             <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
               {about.intro.description}
             </Column>
+          )}
+
+          {about.techStack.display && (
+            <>
+              <Heading as="h2" variant="display-strong-s" marginBottom="m">
+                Tech Stack
+              </Heading>
+              <Flex wrap gap="16" marginBottom="40">
+                {about.techStack.icons.map((tech, index) => (
+                  <Flex
+                    key={`${tech.name}-${index}`}
+                    border="neutral-medium"
+                    radius="m"
+                    padding="16"
+                    gap="8"
+                    vertical="center"
+                  >
+                    <Image 
+                      src={tech.icon} 
+                      alt={tech.name}
+                      width={24}
+                      height={24}
+                    />
+                    <Text variant="body-default-s">{tech.name}</Text>
+                  </Flex>
+                ))}
+              </Flex>
+            </>
           )}
 
           {about.work.display && (

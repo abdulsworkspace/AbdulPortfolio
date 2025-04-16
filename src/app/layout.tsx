@@ -1,39 +1,37 @@
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
-
 import classNames from "classnames";
-
 import { Footer, Header, RouteGuard } from "@/components";
 import { baseURL, effects, style } from "@/app/resources";
-
 import { Inter, Source_Code_Pro } from "next/font/google";
-
 import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 
 export async function generateMetadata() {
   return {
     metadataBase: new URL(`https://${baseURL}`),
-    title: home.title,
-    description: home.description,
+    title: "Abdul Rehman - Software Engineer & Cyber Security Researcher",
+    description: "Portfolio of Abdul Rehman, showcasing software engineering and cyber security research projects",
     openGraph: {
-      title: `${person.firstName}'s Portfolio`,
-      description: "Portfolio website showcasing my work.",
-      url: baseURL,
-      siteName: `${person.firstName}'s Portfolio`,
+      title: "Abdul Rehman - Software Engineer & Cyber Security Researcher",
+      description: "Portfolio of Abdul Rehman, showcasing software engineering and cyber security research projects",
+      url: "https://abdul-portfolio-olive.vercel.app",
+      siteName: "Abdul Rehman Portfolio",
+      images: [
+        {
+          url: "/images/og.png",
+          width: 1200,
+          height: 630,
+        },
+      ],
       locale: "en_US",
       type: "website",
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
+    twitter: {
+      card: "summary_large_image",
+      title: "Abdul Rehman - Software Engineer & Cyber Security Researcher",
+      description: "Portfolio of Abdul Rehman, showcasing software engineering and cyber security research projects",
+      images: ["/images/og.png"],
     },
   };
 }

@@ -54,10 +54,11 @@ import {
   FaInstagram 
 } from "react-icons/fa6";
 
+type IconLibraryType = {
+  [key: string]: IconType | string;
+};
 
-
-export const iconLibrary: Record<string, IconType> = {
-  // Remove duplicate entries and ensure each icon has a unique key
+export const iconLibrary: IconLibraryType = {
   chevronUp: HiChevronUp,
   chevronDown: HiChevronDown,
   chevronRight: HiChevronRight,
@@ -109,5 +110,10 @@ export const iconLibrary: Record<string, IconType> = {
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   
   // Tech Stack icons
-
+  vscode: "/images/icons/vscode.png",
+  flutter: "/images/icons/flutter.png",
+  react: "/images/icons/react.png",
+  cpp: "/images/icons/cpp.png",
+  java: "/images/icons/java.png",
+  ai: "/images/icons/ai.png",
 };
