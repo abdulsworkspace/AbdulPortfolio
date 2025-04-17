@@ -7,21 +7,17 @@ import { person } from "@/app/resources/content";
 import { formatDate } from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
 
+// Update the BlogParams interface
 interface BlogParams {
   params: {
     slug: string;
   };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "blog", "posts"]);
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
-
-export function generateMetadata({ params: { slug } }: BlogParams) {
-  let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === slug);
+// Update the generateMetadata function
+export function generateMetadata({ params }: BlogParams) {
+  let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === params.slug);
 
   if (!post) {
     return;
@@ -61,7 +57,8 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
   };
 }
 
-export default function Blog({ params }: BlogParams) {
+// Update the Blog component
+export default async function Blog({ params }: BlogParams) {
   let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === params.slug);
 
   if (!post) {
@@ -113,4 +110,12 @@ export default function Blog({ params }: BlogParams) {
       <ScrollToHash />
     </Column>
   );
+}
+
+// generateStaticParams remains unchanged as it's already correctly typed
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  const posts = getPosts(["src", "app", "blog", "posts"]);
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
