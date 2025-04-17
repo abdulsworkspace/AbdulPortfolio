@@ -281,7 +281,7 @@ export default function About() {
                   >
                     <Image 
                       src={tech.icon} 
-                      alt={tech.name}
+                      alt={`${tech.name} icon`} // Added descriptive alt text
                       width={24}
                       height={24}
                     />

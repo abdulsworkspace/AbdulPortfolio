@@ -30,19 +30,23 @@ const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
         zIndex={0}
         {...rest}
       >
-        {displayedAvatars.map((avatarProps, index) => (
-          <Avatar
-            position="relative"
-            key={index}
-            size={size}
-            {...avatarProps}
-            className={styles.avatar}
-            style={{
-              ...avatarProps.style,
-              zIndex: reverse ? displayedAvatars.length - index : index + 1,
-            }}
-          />
-        ))}
+        {displayedAvatars.map((avatarProps, index) => {
+          // Destructure key from avatarProps to avoid spreading it
+          const { key, ...restAvatarProps } = avatarProps;
+          return (
+            <Avatar
+              key={index}
+              position="relative"
+              size={size}
+              {...restAvatarProps}
+              className={styles.avatar}
+              style={{
+                ...avatarProps.style,
+                zIndex: reverse ? displayedAvatars.length - index : index + 1,
+              }}
+            />
+          );
+        })}
         {remainingCount > 0 && (
           <Avatar
             value={`+${remainingCount}`}
