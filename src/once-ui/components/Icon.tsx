@@ -33,7 +33,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
     },
     ref,
   ) => {
-    const IconComponent: IconType | undefined = iconLibrary[name];
+    const IconComponent = iconLibrary[name] as IconType;
 
     if (!IconComponent) {
       console.warn(`Icon "${name}" does not exist in the library.`);
