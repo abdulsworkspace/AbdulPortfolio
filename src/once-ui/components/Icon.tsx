@@ -62,13 +62,10 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
     useEffect(() => {
       let timer: NodeJS.Timeout;
       if (isHover) {
-        timer = setTimeout(() => {
-          setTooltipVisible(true);
-        }, 400);
+        timer = setTimeout(() => setTooltipVisible(true), 400);
       } else {
         setTooltipVisible(false);
       }
-
       return () => clearTimeout(timer);
     }, [isHover]);
 

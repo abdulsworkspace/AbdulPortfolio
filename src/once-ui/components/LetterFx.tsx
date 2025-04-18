@@ -109,7 +109,7 @@ const LetterFx = forwardRef<HTMLSpanElement, LetterFxProps>(
         charset,
         trigger === "instant" ? setHasAnimated : undefined,
       ),
-      [inProgress, trigger, speed, charset],
+      [originalText, setText, inProgress, setInProgress, speed, charset, trigger, setHasAnimated]
     );
 
     useEffect(() => {

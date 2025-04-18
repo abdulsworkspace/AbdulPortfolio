@@ -53,6 +53,7 @@ export async function GET(request: Request) {
         >
           <img
             src={"https://" + baseURL + person.avatar}
+            alt={`${person.name}'s avatar`} // Add meaningful alt text
             style={{
               width: "12rem",
               height: "12rem",

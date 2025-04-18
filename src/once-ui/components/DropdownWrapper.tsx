@@ -117,26 +117,27 @@ const DropdownWrapper = forwardRef<HTMLDivElement, DropdownWrapperProps>(
       }
     }, [isOpen, mounted, refs, update]);
 
-    const handleClickOutside = (event: MouseEvent) => {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
-        handleOpenChange(false);
-      }
-    };
-
-    const handleFocusOut = (event: FocusEvent) => {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.relatedTarget as Node)) {
-        handleOpenChange(false);
-      }
-    };
-
     useEffect(() => {
-      document.addEventListener("mousedown", handleClickOutside);
-      wrapperRef.current?.addEventListener("focusout", handleFocusOut);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-        wrapperRef.current?.removeEventListener("focusout", handleFocusOut);
+      const wrapper = wrapperRef.current; // Copy ref to a local variable
+      const handleClickOutside = (event: MouseEvent) => {
+        if (wrapper && !wrapper.contains(event.target as Node)) {
+          handleOpenChange(false);
+        }
       };
-    }, []);
+      const handleFocusOut = (event: FocusEvent) => {
+        if (wrapper && !wrapper.contains(event.relatedTarget as Node)) {
+          handleOpenChange(false);
+        }
+      };
+
+      document.addEventListener("click", handleClickOutside);
+      document.addEventListener("focusout", handleFocusOut);
+
+      return () => {
+        document.removeEventListener("click", handleClickOutside);
+        document.removeEventListener("focusout", handleFocusOut);
+      };
+    }, [handleOpenChange]);
 
     return (
       <Flex
