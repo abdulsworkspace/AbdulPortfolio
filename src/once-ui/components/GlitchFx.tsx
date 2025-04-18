@@ -59,6 +59,10 @@ const GlitchFx = forwardRef<HTMLDivElement, GlitchFxProps>(
       }
     }, [trigger, interval]);
 
+    useEffect(() => {
+      // Effect logic here
+    }, [triggerGlitch]); // Add missing dependency
+
     const speedClass = styles[speed];
 
     return (

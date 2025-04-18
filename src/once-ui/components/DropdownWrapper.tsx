@@ -137,7 +137,7 @@ const DropdownWrapper = forwardRef<HTMLDivElement, DropdownWrapperProps>(
         document.removeEventListener("click", handleClickOutside);
         document.removeEventListener("focusout", handleFocusOut);
       };
-    }, [handleOpenChange]);
+    }, [handleOpenChange]); // Add missing dependencies
 
     return (
       <Flex
