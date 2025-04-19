@@ -6,30 +6,30 @@ import { baseURL } from "@/app/resources";
 import { person } from "@/app/resources/content";
 import { formatDate } from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
+import { Metadata } from "next";
 
-// Update the BlogParams interface
-interface BlogParams {
-  params: {
-    slug: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
+// Properly define the params using Next.js types
+type Params = {
+  slug: string;
+};
 
-// Update the generateMetadata function
-export function generateMetadata({ params }: BlogParams) {
+// Update the generateMetadata function with proper types
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
   let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === params.slug);
 
   if (!post) {
-    return;
+    return {};
   }
 
   let {
     title,
     publishedAt: publishedTime,
     summary: description,
-    images,
     image,
-    team,
   } = post.metadata;
   let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
 
@@ -57,8 +57,12 @@ export function generateMetadata({ params }: BlogParams) {
   };
 }
 
-// Update the Blog component
-export default async function Blog({ params }: BlogParams) {
+// Update the Blog component to match Next.js 15.3.0 page component signature
+export default async function Blog({
+  params,
+}: {
+  params: Params;
+}) {
   let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === params.slug);
 
   if (!post) {
@@ -112,7 +116,7 @@ export default async function Blog({ params }: BlogParams) {
   );
 }
 
-// generateStaticParams remains unchanged as it's already correctly typed
+// Use consistent type for generateStaticParams
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "blog", "posts"]);
   return posts.map((post) => ({

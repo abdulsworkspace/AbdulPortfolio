@@ -33,6 +33,20 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
     },
     ref,
   ) => {
+    // Move all hooks to the top level before any conditional returns
+    const [isTooltipVisible, setTooltipVisible] = useState(false);
+    const [isHover, setIsHover] = useState(false);
+    
+    useEffect(() => {
+      let timer: NodeJS.Timeout;
+      if (isHover) {
+        timer = setTimeout(() => setTooltipVisible(true), 400);
+      } else {
+        setTooltipVisible(false);
+      }
+      return () => clearTimeout(timer);
+    }, [isHover]);
+    
     const IconComponent = iconLibrary[name] as IconType;
 
     if (!IconComponent) {
@@ -55,19 +69,6 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
       const [scheme, weight] = onSolid.split("-") as [ColorScheme, ColorWeight];
       colorClass = `${scheme}-on-solid-${weight}`;
     }
-
-    const [isTooltipVisible, setTooltipVisible] = useState(false);
-    const [isHover, setIsHover] = useState(false);
-
-    useEffect(() => {
-      let timer: NodeJS.Timeout;
-      if (isHover) {
-        timer = setTimeout(() => setTooltipVisible(true), 400);
-      } else {
-        setTooltipVisible(false);
-      }
-      return () => clearTimeout(timer);
-    }, [isHover]);
 
     return (
       <Flex

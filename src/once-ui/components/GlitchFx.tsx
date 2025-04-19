@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, forwardRef } from "react";
+import React, { useEffect, useState, forwardRef, useCallback } from "react";
 import styles from "./GlitchFx.module.scss";
 import { Flex } from "./Flex";
 import classNames from "classnames";
@@ -45,23 +45,19 @@ const GlitchFx = forwardRef<HTMLDivElement, GlitchFxProps>(
       }
     };
 
-    const triggerGlitch = () => {
+    const triggerGlitch = useCallback(() => {
       if (trigger === "custom") {
         setIsGlitching(true);
         setTimeout(() => setIsGlitching(false), 500);
       }
-    };
+    }, [trigger]);
 
     useEffect(() => {
       if (trigger === "custom") {
         const glitchInterval = setInterval(triggerGlitch, interval);
         return () => clearInterval(glitchInterval);
       }
-    }, [trigger, interval]);
-
-    useEffect(() => {
-      // Effect logic here
-    }, [triggerGlitch]); // Add missing dependency
+    }, [trigger, interval, triggerGlitch]);
 
     const speedClass = styles[speed];
 

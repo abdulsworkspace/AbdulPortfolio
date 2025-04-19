@@ -7,6 +7,7 @@ import React, {
   ReactNode,
   forwardRef,
   useImperativeHandle,
+  useCallback,
 } from "react";
 import {
   useFloating,
@@ -63,12 +64,12 @@ const DropdownWrapper = forwardRef<HTMLDivElement, DropdownWrapperProps>(
     const isControlled = controlledIsOpen !== undefined;
     const isOpen = isControlled ? controlledIsOpen : internalIsOpen;
 
-    const handleOpenChange = (newIsOpen: boolean) => {
+    const handleOpenChange = useCallback((newIsOpen: boolean) => {
       if (!isControlled) {
         setInternalIsOpen(newIsOpen);
       }
       onOpenChange?.(newIsOpen);
-    };
+    }, [isControlled, onOpenChange]);
 
     const { x, y, strategy, refs, update } = useFloating({
       placement: floatingPlacement,
@@ -104,7 +105,7 @@ const DropdownWrapper = forwardRef<HTMLDivElement, DropdownWrapperProps>(
       if (!mounted) {
         setMounted(true);
       }
-    }, []);
+    }, [mounted]);
 
     useEffect(() => {
       if (isOpen && mounted) {
@@ -137,7 +138,7 @@ const DropdownWrapper = forwardRef<HTMLDivElement, DropdownWrapperProps>(
         document.removeEventListener("click", handleClickOutside);
         document.removeEventListener("focusout", handleFocusOut);
       };
-    }, [handleOpenChange]); // Add missing dependencies
+    }, [handleOpenChange]); 
 
     return (
       <Flex
