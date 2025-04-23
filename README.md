@@ -150,18 +150,15 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 Feel free to reach out to me:
 
 - **Email**: [iamabdulrehman.technophile@gmail.com](mailto:iamabdulrehman.technophile@gmail.com)
-- **LinkedIn**: [linkedin.com/in/your-profile](https://linkedin.com/in/abdulrehmansarwar)
-- **GitHub**: [github.com/your-username](https://github.com/abdulrehman-dev-ai)
+- **LinkedIn**: [linkedin.com/in/abdulrehmansarwar](https://linkedin.com/in/abdulrehmansarwar)
+- **GitHub**: [github.com/abdulrehman-dev-ai](https://github.com/abdulrehman-dev-ai)
 
 ---
 
 ## 📷 Screenshots
 
 ### Home Page
-![Home Page](public/screenshots/home-page.png)
-
-### Projects Section
-![Projects Section](public/screenshots/projects-section.png)
+![Home Page](public/images/cover.png)
 
 ---
 
