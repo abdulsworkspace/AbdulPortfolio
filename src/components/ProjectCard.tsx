@@ -58,7 +58,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <Column flex={7} gap="16">
             {avatars?.length > 0 && (
               <AvatarGroup
-                avatars={avatars.map((avatar, index) => ({ ...avatar, key: index }))} // Add key
+                avatars={avatars.map((avatar) => ({ ...avatar }))} 
                 size="m"
                 reverse
               />
