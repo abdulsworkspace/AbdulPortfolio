@@ -1,7 +1,7 @@
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
 import classNames from "classnames";
-import { Footer, Header, RouteGuard } from "@/components";
+import { Footer, Header, RouteGuard, MarqueeText } from "@/components";
 import { baseURL, effects, style } from "@/app/resources";
 import { Inter, Source_Code_Pro } from "next/font/google";
 import { person, home } from "@/app/resources/content";
@@ -189,6 +189,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
               <RouteGuard>{children}</RouteGuard>
             </Flex>
           </Flex>
+          <MarqueeText />
           <Footer />
         </Column>
       </ToastProvider>
