@@ -265,7 +265,7 @@ export default function About() {
           {about.techStack.display && (
             <>
               <Heading as="h2" variant="display-strong-s" marginBottom="m">
-                Tech Stack
+                Tools I Play With
               </Heading>
               <Flex wrap gap="16" marginBottom="40">
                 {about.techStack.icons.map((tech, index) => (
