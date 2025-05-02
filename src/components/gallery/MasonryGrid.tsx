@@ -4,8 +4,10 @@ import Masonry from "react-masonry-css";
 import { SmartImage } from "@/once-ui/components";
 import styles from "./Gallery.module.scss";
 import { gallery } from "@/app/resources/content";
+import { display } from "@/app/resources/config";
 
 export default function MasonryGrid() {
+  if (!display.gallery) return null;
   const breakpointColumnsObj = {
     default: 4,
     1440: 3,

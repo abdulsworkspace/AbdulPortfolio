@@ -65,6 +65,7 @@ const effects = {
 const display = {
   location: true,
   time: true,
+  gallery: false, // Toggle to show/hide the gallery section
 };
 
 const mailchimp = {

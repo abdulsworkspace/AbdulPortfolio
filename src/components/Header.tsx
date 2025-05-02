@@ -126,7 +126,7 @@ export const Header = () => {
                   />
                 </>
               )}
-              {routes["/gallery"] && (
+              {routes["/gallery"] && display.gallery && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
