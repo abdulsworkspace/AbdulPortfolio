@@ -134,7 +134,7 @@ const about = {
       //experience 1
       {
         company: "Auto Levels Pvt.Ltd",
-        timeframe: "2022 - Present",
+        timeframe: "2022 - 2025",
         role: "IT Manager & CTO",
         achievements: [
           <span key="autolevels-achievement-1">
